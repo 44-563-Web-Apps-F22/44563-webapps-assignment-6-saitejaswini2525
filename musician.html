@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 6</title>
+    </head>
+<body>
+ <header>Musicians guess by Yarapathineni Sai Tejaswini</header>
+
+<h2>Getting input</h2>
+
+<form>
+    <label for="secc1_musician">Enter the secret Musician name </label>
+    <input type ="password" id="secc1_musician" name="secretName" min=10 max=50 step=2 value="Jhon Lennon"> <br>
+
+    <label for="gss1_musician">Guess the Musician </label>
+    <input type ="text" id="gss1_musician" name="guessMusician" autofocus> <br>
+
+    <input type="button" onclick="checkGuess()" value="Check the Guess">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+
+        let correct=0;
+        let wrong=0;
+    
+        function  checkGuess(){
+           console.log("Getting form values")
+            SecretMusician = document.getElementById("secc1_musician").value
+            guess = document.getElementById("gss1_musician").value
+            
+    
+            
+            if(SecretMusician==guess){
+                correct+=1;
+                alert("You got it right");
+            } else {
+                wrong+=1;
+                alert("Wrong");
+            }
+           document.getElementById("result").innerHTML="correct "+correct+"  wrong "+wrong;
+        }
+</script>
+
+</body>
+</html> 
