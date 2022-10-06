@@ -36,7 +36,7 @@
     <label for="gss1_musician">Guess the Musician </label>
     <input type ="text" id="gss1_musician" name="guessMusician" autofocus class="form-control"> <br>
 
-    <input type="button" onclick="checkGuess()" value="Check the Guess"class="form-control" >
+    <input type="button" onclick="checkGuess()" value="Check the Guess" >
 </form>
 
 
@@ -62,10 +62,8 @@
                 alert("Wrong");
             }
 
-            if(count>=3){
-                if(wrong>=3){
-                    gmaeover()
-                }
+            if(wrong>=3){
+                gameover()
             }
            document.getElementById("result").innerHTML="correct "+correct+"  wrong "+wrong;
         }
