@@ -22,6 +22,16 @@
 
     <input type="button"class="btn btn-secondary"  type="button" onclick="selectVacation()" value="Select a Vacation">
 </form>
+<form>
+    <label for="property">Enter a city</label>
+    <input type ="text" id="property" name="property" value="city"> <br>
+
+    <label for="check">Enter price</label>
+    <input type ="text" id="value" name="check"><br>
+
+    <input type="button" class="btn btn-secondary" type="button" onclick="updateVacation()" value="Update the Vacation">
+</form>
+
 
 <p id="result">This text will be replaced </p>
 
@@ -52,6 +62,14 @@ function selectVacation(){
     else{my_vacation.resort=false}
     ou.innerHTML=JSON.stringify(my_vacation)    
 }
+function updateVacation(){
+        var s=document.getElementById("property").value
+        var p=document.getElementById("value").value
+        my_vacation[s]=p
+        ou.innerHTML=JSON.stringify(my_vacation)
+    }
 </script>
+
+
 </body>
 </html>
